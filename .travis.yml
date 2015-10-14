@@ -1,0 +1,8 @@
+language: julia
+julia: 0.4.0
+#sudo: required
+#services: docker
+notifications:
+  email: false
+script:
+    - julia -e 'Base.runtests("socket")'
