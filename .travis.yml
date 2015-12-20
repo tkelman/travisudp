@@ -2,12 +2,9 @@ language: generic
 cache:
   directories:
     - testcache
-%sudo: required
-%dist: trusty
 notifications:
   email: false
 script:
     - cat testcache/shouldbeempty
     - mkdir -p testcache
     - echo 'THIS SHOULD NOT GET SAVED' > testcache/shouldbeempty
-%    - julia -e 'Base.runtests("socket")'
